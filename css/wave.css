@@ -1,0 +1,30 @@
+.sea {
+  display: flex;
+  flex-wrap: wrap;
+  width: 25vw;
+  height: 25vw;
+  transform-style: preserve-3d;
+  transform: rotateX(70deg) rotateZ(35deg);
+}
+
+.wave {
+  filter: blur(0.1vw);
+  width: 2.5vw;
+  height: 2.5vw;
+  background: linear-gradient(#0F0, #000);
+  transform: translateZ(0) rotateX(90deg);
+  transform-origin: top;
+  margin: -22px 3px;
+  animation: wave 2s ease-in-out infinite alternate;
+  opacity: 0.7;
+  border-radius: 0 0 2px 2px;
+}
+
+@keyframes wave {
+  from {
+    height: 8px;
+  }
+  to {
+    height: 32px;
+  }
+}
