@@ -1,322 +1,306 @@
 <!DOCTYPE html>
-<html  lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <title>Jadoo👽</title>
-    <link rel="stylesheet" href="css/main.css">
-  </head>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jadoo - Alien Communication Interface</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/wave.css">
+  <link rel="stylesheet" href="css/ellipse.css">
+  <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+</head>
 <body>
-  <div class="background-image"></div>
-  <div id="monitor" class="crt content">
-  <img class="background" src="assets/loader.gif"/>
-
-
-<div class="enter-text">
-    <h1>Press Enter to Continue</h1>
-    <p>Project: Jadoo - Inspired by the movie "Koi Mil Gaya"</p>
-    <p>Made with ❤️ by Nikhil</a></p>
-  </div>  
-  <div class="line vline nodisplay"></div>
-  <div class="line hline nodisplay"></div>
-  <div class="line hline1 nodisplay"></div>
-  <div class="line hline2 nodisplay"></div>
-  <div class='wrap nodisplay'>
-    <div class='circle'><div class="radar radar1"></div></div>
-    <div class='circle'><div class="radar radar2"></div></div>
-    <div class='circle'><div class="radar radar3"></div></div>
-    <div class='circle'></div>
+  <!-- Audio Preloader -->
+  <div id="audio-loader" class="audio-loader">
+    <div class="loader-inner">
+      <div class="alien-icon"></div>
+      <div class="loading-text">INITIALIZING ALIEN COMMUNICATION SYSTEM</div>
+      <div class="progress-bar"><div class="progress"></div></div>
+    </div>
   </div>
-  <pre class="garbage garbage-left nodisplay">
-    uplink = yes
-     axis. = 40
-      inc. = 48 pos
-       dec = 57 neg
-        frequency = 199
 
-    signal = 80 b
-  </pre>
-  <pre class="garbage garbage-right nodisplay">
-    B:066
-    C:067
-    D:068
-    E:069
-    F:070
-  </pre>
-  <div class="prompt nodisplay">
-    PRESS KEYS <span class="prompt-key"></span>
+  <!-- Landing Page - Professional UI -->
+  <div id="landing-page">
+    <div class="stars"></div>
+    <div class="twinkling"></div>
+    <div class="clouds"></div>
+    
+    <!-- Animated UFO -->
+    <div class="ufo-container">
+      <div class="ufo">
+        <div class="ufo-body"></div>
+        <div class="ufo-light"></div>
+        <div class="beam"></div>
+      </div>
+    </div>
+    
+    <!-- Floating Particles -->
+    <div class="particles-container"></div>
+    
+    <div class="landing-content">
+      <!-- Left Terminal Panel -->
+      <div class="terminal-panel left">
+        <div class="terminal-header">
+          <div class="terminal-dots">
+            <span></span><span></span><span></span>
+          </div>
+          <div class="terminal-title">SYSTEM STATUS</div>
+        </div>
+        <div class="terminal-body">
+          <div class="terminal-line">><span class="typing-text"> INITIALIZING SYSTEMS...</span></div>
+          <div class="terminal-line">><span class="typing-text"> CALIBRATING SIGNAL ARRAYS...</span></div>
+          <div class="terminal-line">><span class="typing-text"> CONNECTING TO SATELLITE NETWORK...</span></div>
+          <div class="terminal-line">><span class="typing-text"> SEARCHING FOR EXTRATERRESTRIAL FREQUENCIES...</span></div>
+          <div class="terminal-line">><span class="typing-text"> ALL SYSTEMS READY.</span></div>
+          <div class="terminal-line active">><span class="typing-text"> AWAITING USER INPUT...</span></div>
+        </div>
+      </div>
+      
+      <!-- Central Info Panel -->
+      <div class="central-panel">
+        <div class="logo-container">
+          <div class="logo-design">
+            <div class="logo-ring outer"></div>
+            <div class="logo-ring middle"></div>
+            <div class="logo-ring inner"></div>
+            <div class="logo-core"></div>
+          </div>
+          <h1 class="jadoo-text">JADOO</h1>
+        </div>
+        
+        <div class="tagline">
+          <span>ADVANCED ALIEN COMMUNICATION INTERFACE</span>
+        </div>
+        
+        <div class="movie-reference">
+          <span>INSPIRED BY "KOI MIL GAYA"</span>
+        </div>
+        
+        <div class="enter-container">
+          <button class="enter-button">
+            <span class="enter-text">ESTABLISH CONNECTION</span>
+            <div class="enter-icon">⏎</div>
+          </button>
+          <div class="keyboard-hint">PRESS <span class="key-badge">ENTER</span> TO BEGIN</div>
+        </div>
+      </div>
+      
+      <!-- Right Terminal Panel -->
+      <div class="terminal-panel right">
+        <div class="terminal-header">
+          <div class="terminal-title">SIGNAL ANALYSIS</div>
+          <div class="terminal-dots">
+            <span></span><span></span><span></span>
+          </div>
+        </div>
+        <div class="terminal-body">
+          <div class="signal-display">
+            <div class="signal-label">FREQUENCY SCAN</div>
+            <div class="signal-bars">
+              <div class="signal-bar"></div>
+              <div class="signal-bar"></div>
+              <div class="signal-bar"></div>
+              <div class="signal-bar"></div>
+              <div class="signal-bar"></div>
+              <div class="signal-bar"></div>
+              <div class="signal-bar"></div>
+              <div class="signal-bar"></div>
+            </div>
+          </div>
+          <div class="signal-coordinates">
+            <div class="coordinate-row">
+              <span class="coordinate-label">ORIGIN:</span>
+              <span class="coordinate-value">PROXIMA CENTAURI</span>
+            </div>
+            <div class="coordinate-row">
+              <span class="coordinate-label">DISTANCE:</span>
+              <span class="coordinate-value">4.246 LIGHT YEARS</span>
+            </div>
+            <div class="coordinate-row">
+              <span class="coordinate-label">SIGNAL STRENGTH:</span>
+              <span class="coordinate-value">87%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Credit Line -->
+      <div class="credit-line">
+        <span>DEVELOPED BY</span>
+        <span class="dev-name">NIKHIL</span>
+        <span class="version-number">v1.2.4</span>
+      </div>
+    </div>
   </div>
-  <div class="sending nodisplay">
-    SENDING
-  </div>
-  <div class="receiving nodisplay">
-    <img id="receivedImage" src="assets/black.jpg" alt="Message" width="100" height="100">
-    RECEIVING
-  </div> 
-<div class="sea sea-left nodisplay">
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-</div>
-<div class="sea sea-right nodisplay">
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-  <div class="wave nodisplay"></div>
-</div>
-</div>
- <audio data-key="66" src="assets/B.mp3"></audio>
-  <audio data-key="67" src="assets/C.mp3"></audio>
-  <audio data-key="68" src="assets/D.mp3"></audio>
-  <audio data-key="69" src="assets/E.mp3"></audio>
-  <audio data-key="70" src="assets/F.mp3"></audio>
 
-  <script type="text/javascript" src="js/crt.js"></script>
-<script type="text/javascript">
-  function playAudio (e) {
-    const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
-    const key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
-    if (!audio) return; //exits the function altogether
-    audio.currentTime = 0; //resets the playhead
-    audio.play();
-  }
-  window.addEventListener('keydown', playAudio);
-  onLoad();
-</script>  
-<link rel="stylesheet" href="css/ellipse.css">
-<link rel="stylesheet" href="css/wave.css">
-<link rel="stylesheet" href="css/main.css">
+  <!-- Alien Communication Dashboard -->
+  <div id="alien-dashboard" class="hidden">
+    <div class="dashboard-container">
+      <!-- Background Elements -->
+      <div class="space-background"></div>
+      <div class="grid-overlay"></div>
+      <div class="scan-line"></div>
+      <div class="noise-overlay"></div>
+      
+      <!-- Data Transmission Particles -->
+      <div class="data-particles-container"></div>
+
+      <!-- Header Section -->
+      <header class="dashboard-header">
+        <div class="status-indicator active">CONNECTION ACTIVE</div>
+        <div class="coordinates">SECTOR: X-37B • QUADRANT: ZETA-9</div>
+        <div class="mission-time">MISSION TIME: <span id="mission-timer">00:00:00</span></div>
+      </header>
+
+      <!-- Main Control Panel -->
+      <div class="control-panel">
+        <div class="panel-section transmission-panel">
+          <h2 class="panel-title">TRANSMISSION CONTROLS</h2>
+          <div class="frequency-meters">
+            <div class="meter">
+              <div class="meter-label">ALPHA</div>
+              <div class="meter-bar"><div class="meter-level"></div></div>
+            </div>
+            <div class="meter">
+              <div class="meter-label">BETA</div>
+              <div class="meter-bar"><div class="meter-level"></div></div>
+            </div>
+            <div class="meter">
+              <div class="meter-label">GAMMA</div>
+              <div class="meter-bar"><div class="meter-level"></div></div>
+            </div>
+          </div>
+          
+          <!-- Transmission Wave Container will be added here by JS -->
+          
+          <div class="control-buttons">
+            <div class="key-instructions">
+              <p class="sequence-hint">Koi Mil Gaya Sequence: <span class="sequence-text">B C F E B C E D B C F E D C</span></p>
+              <div class="key-row">
+                <div class="key" data-key="66">B</div>
+                <div class="key" data-key="67">C</div>
+                <div class="key" data-key="68">D</div>
+                <div class="key" data-key="69">E</div>
+                <div class="key" data-key="70">F</div>
+              </div>
+              <p class="instruction-text">PRESS KEYS TO TRANSMIT SIGNAL</p>
+            </div>
+          </div>
+          
+          <div class="connection-strength">
+            <div class="strength-label">CONNECTION STRENGTH</div>
+            <div class="strength-indicator">
+              <div class="strength-bar"></div>
+              <div class="strength-bar"></div>
+              <div class="strength-bar"></div>
+              <div class="strength-bar"></div>
+              <div class="strength-bar"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel-section visualization-panel">
+          <h2 class="panel-title">ALIEN SIGNAL DETECTOR</h2>
+          <div class="radar-container">
+            <div class="radar-screen">
+              <div class="radar-sweep"></div>
+              <div class="radar-circles">
+                <div class="radar-circle"></div>
+                <div class="radar-circle"></div>
+                <div class="radar-circle"></div>
+              </div>
+              <div class="blip hidden"></div>
+              <!-- Ping effects will be added here dynamically -->
+            </div>
+            <div class="radar-stats">
+              <div class="stat">
+                <div class="stat-label">SIGNAL</div>
+                <div class="stat-value" id="signal-value">85%</div>
+              </div>
+              <div class="stat">
+                <div class="stat-label">RANGE</div>
+                <div class="stat-value" id="range-value">418 LY</div>
+              </div>
+            </div>
+          </div>
+          <div class="waveform-container">
+            <div class="waveform"></div>
+            <!-- Frequency bars will be added here by JS -->
+          </div>
+        </div>
+
+        <div class="panel-section response-panel">
+          <h2 class="panel-title">ALIEN RESPONSE</h2>
+          <div class="response-screen">
+            <div class="response-placeholder">AWAITING TRANSMISSION...</div>
+            <div class="response-image hidden">
+              <img id="receivedImage" src="assets/black.jpg" alt="Alien Response">
+            </div>
+            <!-- Data particles will be added here by JS -->
+          </div>
+          <div class="transmission-log-container">
+            <div class="log-header">
+              <span>TRANSMISSION LOG</span>
+              <button id="clear-log" class="log-button">CLEAR</button>
+            </div>
+            <div class="transmission-log">
+              <div class="log-entry system">SYSTEM INITIALIZED</div>
+              <div class="log-entry system">READY TO RECEIVE</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Footer Data Readouts -->
+      <footer class="dashboard-footer">
+        <div class="data-stream">
+          <pre class="data-text">UPLINK: ACTIVE   PING: 17.23ms   SIGNAL: 89%   ENCRYPTION: ENABLED   ORIGIN: PROXIMA CENTAURI   TRANSMISSION MODE: OM-WAVE   JADOO PROTOCOL: ACTIVE   SIGNAL STRENGTH: OPTIMAL   COORDINATES: 382.144.7721   SPECTRAL ANALYSIS: IN PROGRESS   FREQUENCY DEVIATION: 0.00731Hz   GALACTIC SECTOR: PHI-3   MEMORY BUFFER: 87%   DATA STREAM INTACT   RADIATION LEVELS: NOMINAL</pre>
+        </div>
+      </footer>
+
+      <!-- Wave Transmission Visualization -->
+      <div class="wave-container">
+        <div class="sea">
+          <!-- Dynamic waves will be generated by JS -->
+          <div class="wave"></div>
+          <div class="wave"></div>
+          <div class="wave"></div>
+          <div class="wave"></div>
+          <div class="wave"></div>
+          <div class="wave"></div>
+          <div class="wave"></div>
+          <div class="wave"></div>
+          <div class="wave"></div>
+          <div class="wave"></div>
+        </div>
+      </div>
+
+      <!-- Ellipse Transmission Visualization -->
+      <div class="wrap">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Notification System -->
+  <div id="notification-container" class="notification-container"></div>
+
+  <!-- Audio Elements -->
+  <audio id="audioB" data-key="66" src="assets/B.mp3" preload="auto"></audio>
+  <audio id="audioC" data-key="67" src="assets/C.mp3" preload="auto"></audio>
+  <audio id="audioD" data-key="68" src="assets/D.mp3" preload="auto"></audio>
+  <audio id="audioE" data-key="69" src="assets/E.mp3" preload="auto"></audio>
+  <audio id="audioF" data-key="70" src="assets/F.mp3" preload="auto"></audio>
+  <audio id="startup" src="assets/B.mp3" preload="auto"></audio>
+  <audio id="success" src="assets/B.mp3" preload="auto"></audio>
+
+  <script src="js/crt.js"></script>
 </body>
 </html>

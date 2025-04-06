@@ -7,24 +7,400 @@
   transform: rotateX(70deg) rotateZ(35deg);
 }
 
+/* Enhanced wave animations for more alien transmission effect */
 .wave {
-  filter: blur(0.1vw);
-  width: 2.5vw;
-  height: 2.5vw;
-  background: linear-gradient(#0F0, #000);
-  transform: translateZ(0) rotateX(90deg);
-  transform-origin: top;
-  margin: -22px 3px;
-  animation: wave 2s ease-in-out infinite alternate;
-  opacity: 0.7;
-  border-radius: 0 0 2px 2px;
+  position: absolute;
+  float: left;
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #0f0, 0 0 20px rgba(0, 255, 0, 0.7);
+  margin: 0.2em;
+  transform-origin: center center;
+  background: rgba(0, 255, 0, 0.15);
+  animation: wavePulse 3s infinite alternate;
+  clip-path: polygon(
+    50% 0%,
+    100% 25%,
+    100% 75%,
+    50% 100%,
+    0% 75%,
+    0% 25%
+  );
 }
 
-@keyframes wave {
-  from {
-    height: 8px;
+/* More dynamic wave pulse animation with alien technology feel */
+@keyframes wavePulse {
+  0% { 
+    background: rgba(0, 255, 0, 0.15);
+    box-shadow: 0 0 10px #0f0, 0 0 15px rgba(0, 255, 0, 0.7);
+    transform: scale(0.9) rotate(0deg);
+    clip-path: polygon(
+      50% 0%,
+      100% 25%,
+      100% 75%,
+      50% 100%,
+      0% 75%,
+      0% 25%
+    );
   }
-  to {
-    height: 32px;
+  25% {
+    background: rgba(0, 255, 0, 0.25);
+    box-shadow: 0 0 12px #0f0, 0 0 18px rgba(0, 255, 0, 0.8);
+    transform: scale(0.95) rotate(15deg);
+    clip-path: polygon(
+      50% 0%,
+      90% 30%,
+      90% 70%,
+      50% 100%,
+      10% 70%,
+      10% 30%
+    );
+  }
+  50% { 
+    background: rgba(0, 255, 0, 0.3);
+    box-shadow: 0 0 15px #0f0, 0 0 25px rgba(0, 255, 0, 0.9);
+    transform: scale(1.0) rotate(30deg);
+    clip-path: polygon(
+      50% 0%,
+      80% 35%,
+      80% 65%,
+      50% 100%,
+      20% 65%,
+      20% 35%
+    );
+  }
+  75% {
+    background: rgba(0, 255, 0, 0.25); 
+    box-shadow: 0 0 12px #0f0, 0 0 20px rgba(0, 255, 0, 0.8);
+    transform: scale(0.95) rotate(15deg);
+    clip-path: polygon(
+      50% 0%,
+      90% 30%,
+      90% 70%,
+      50% 100%,
+      10% 70%,
+      10% 30%
+    );
+  }
+  100% {
+    background: rgba(0, 255, 0, 0.15);
+    box-shadow: 0 0 10px #0f0, 0 0 15px rgba(0, 255, 0, 0.7);
+    transform: scale(0.9) rotate(0deg);
+    clip-path: polygon(
+      50% 0%,
+      100% 25%,
+      100% 75%,
+      50% 100%,
+      0% 75%,
+      0% 25%
+    );
+  }
+}
+
+/* Add variety to wave animations */
+.wave:nth-child(odd) {
+  animation: float 3s ease-in-out infinite alternate, wavePulse 3s infinite alternate;
+}
+
+.wave:nth-child(even) {
+  animation: float 2.5s ease-in-out infinite alternate-reverse, wavePulse 3.2s infinite alternate-reverse;
+}
+
+.wave:nth-child(3n) {
+  animation: float 2.8s ease-in-out infinite alternate, wavePulse 2.8s infinite alternate;
+}
+
+/* Add static interference effect to waves occasionally */
+.wave:nth-child(5n) {
+  animation: float 3.2s ease-in-out infinite alternate, staticInterference 4s infinite;
+}
+
+@keyframes staticInterference {
+  0%, 100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  25%, 75% {
+    opacity: 1;
+    transform: translateY(-5px) scale(1.05);
+  }
+  49.9% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  50.1% {
+    opacity: 1;
+  }
+  54.9% {
+    opacity: 1;
+  }
+  55% {
+    opacity: 0.3;
+  }
+  55.1% {
+    opacity: 1;
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-10px) scale(1.05);
+  }
+  100% {
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Enhanced focused wave effect for active transmission */
+.wave.focus {
+  background-color: rgba(0, 255, 0, 0.5);
+  box-shadow: 0 0 15px #0f0, 0 0 30px rgba(0, 255, 0, 0.9), inset 0 0 10px #0f0;
+  animation: alienTechPulse 1.5s ease-in-out infinite alternate;
+  z-index: 2;
+  clip-path: polygon(
+    50% 0%,
+    100% 38%,
+    82% 100%,
+    18% 100%,
+    0% 38%
+  );
+}
+
+@keyframes alienTechPulse {
+  0% {
+    transform: scale(1) rotate(0deg);
+    box-shadow: 0 0 15px #0f0, 0 0 25px rgba(0, 255, 0, 0.7);
+    background-color: rgba(0, 255, 0, 0.4);
+    filter: hue-rotate(0deg);
+  }
+  33% {
+    transform: scale(1.05) rotate(30deg);
+    box-shadow: 0 0 20px #0f0, 0 0 30px rgba(0, 255, 0, 0.8);
+    background-color: rgba(0, 255, 0, 0.5);
+    filter: hue-rotate(30deg);
+  }
+  66% {
+    transform: scale(1.1) rotate(60deg);
+    box-shadow: 0 0 25px #0f0, 0 0 35px rgba(0, 255, 0, 0.9);
+    background-color: rgba(0, 255, 0, 0.6);
+    filter: hue-rotate(60deg);
+  }
+  100% {
+    transform: scale(1) rotate(90deg);
+    box-shadow: 0 0 15px #0f0, 0 0 25px rgba(0, 255, 0, 0.7);
+    background-color: rgba(0, 255, 0, 0.4);
+    filter: hue-rotate(90deg);
+  }
+}
+
+/* Create enhanced ripple effect for wave transmission */
+.wave.transmitting {
+  position: relative;
+}
+
+.wave.transmitting::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: 2px solid rgba(0, 255, 0, 0.7);
+  transform: translate(-50%, -50%);
+  animation: alienRipple 2s linear infinite;
+  z-index: -1;
+  clip-path: polygon(
+    50% 0%,
+    100% 25%,
+    100% 75%,
+    50% 100%,
+    0% 75%,
+    0% 25%
+  );
+}
+
+@keyframes alienRipple {
+  0% {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    border-width: 2px;
+  }
+  100% {
+    width: 300%;
+    height: 300%;
+    opacity: 0;
+    border-width: 1px;
+  }
+}
+
+/* Enhanced alien pattern inside waves */
+.wave::after {
+  content: "";
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  width: 80%;
+  height: 80%;
+  border-radius: 0%;
+  background: 
+    radial-gradient(circle at 30% 30%, rgba(0, 255, 0, 0.5) 0%, transparent 20%),
+    radial-gradient(circle at 70% 70%, rgba(0, 255, 0, 0.5) 0%, transparent 20%),
+    radial-gradient(circle at center, rgba(0, 255, 0, 0.2) 0%, transparent 70%),
+    linear-gradient(45deg, transparent 46%, rgba(0, 255, 0, 0.4) 46%, rgba(0, 255, 0, 0.4) 54%, transparent 54%);
+  opacity: 0.7;
+  animation: alienPatternPulse 4s infinite alternate;
+  clip-path: polygon(
+    50% 0%,
+    100% 25%,
+    100% 75%,
+    50% 100%,
+    0% 75%,
+    0% 25%
+  );
+}
+
+@keyframes alienPatternPulse {
+  0% { opacity: 0.5; transform: rotate(0deg); }
+  50% { opacity: 0.7; transform: rotate(180deg); }
+  100% { opacity: 0.9; transform: rotate(360deg); }
+}
+
+/* Enhanced transmission wave container to visualize alien sound waves */
+.transmission-wave-container {
+  position: relative;
+  width: 100%;
+  height: 60px;
+  margin: 10px 0;
+  background: rgba(0, 20, 0, 0.3);
+  border: 1px solid rgba(0, 255, 0, 0.5);
+  overflow: hidden;
+  border-radius: 0;
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 70%,
+    95% 100%,
+    5% 100%,
+    0 70%
+  );
+}
+
+.transmission-wave {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: transparent;
+  transform: translateY(-50%);
+}
+
+.transmission-wave::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #0f0;
+  box-shadow: 0 0 8px #0f0;
+  animation: alienWaveMove 2s infinite linear;
+}
+
+@keyframes alienWaveMove {
+  0% {
+    transform: translateX(-100%) scaleY(1);
+    opacity: 0.7;
+    filter: hue-rotate(0deg);
+  }
+  25% {
+    transform: translateX(-50%) scaleY(2);
+    opacity: 0.8;
+    filter: hue-rotate(90deg);
+  }
+  50% {
+    transform: translateX(0%) scaleY(3);
+    opacity: 0.9;
+    filter: hue-rotate(180deg);
+  }
+  75% {
+    transform: translateX(50%) scaleY(2);
+    opacity: 0.8;
+    filter: hue-rotate(270deg);
+  }
+  100% {
+    transform: translateX(100%) scaleY(1);
+    opacity: 0.7;
+    filter: hue-rotate(360deg);
+  }
+}
+
+/* Enhanced frequency bars for alien visualization */
+.frequency-bars {
+  display: flex;
+  justify-content: space-between;
+  height: 40px;
+  padding: 0 5px;
+}
+
+.freq-bar {
+  width: 3px;
+  background: #0f0;
+  margin: 0 2px;
+  transform-origin: bottom;
+  opacity: 0.7;
+  box-shadow: 0 0 5px #0f0;
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 85%,
+    50% 100%,
+    0 85%
+  );
+}
+
+/* Data stream particles to represent data transmission */
+.data-particles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.data-particle {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: #0f0;
+  box-shadow: 0 0 4px #0f0;
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 0.8;
+  animation: particleFall 3s linear infinite;
+}
+
+@keyframes particleFall {
+  0% {
+    transform: translateY(-10px) translateX(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.8;
+  }
+  90% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(100vh) translateX(20px);
+    opacity: 0;
   }
 }
