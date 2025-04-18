@@ -2,7 +2,7 @@
 
 Welcome to Project Jadoo, a delightful and nostalgic web project that draws inspiration from the iconic Bollywood movie "Koi Mil Gaya." This repository showcases an interactive web application created with HTML, CSS, and JavaScript.
 
-[You can Test this Project's Working by clicking here](https://yadavnikhil03.github.io/Jadoo-Project/).
+[You can Test this Project's Working by clicking here (Might not work good in Mobiles)](https://yadavnikhil03.github.io/Jadoo-Project/).
 
 ## Key Features
 
